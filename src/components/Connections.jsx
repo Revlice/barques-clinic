@@ -1,61 +1,64 @@
 import React from "react";
-import { FiPhoneCall, FiInfo, FiHeadphones } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { FiPhoneCall, FiHeadphones } from "react-icons/fi";
 
 const Connections = () => {
     return (
-        <div className="w-full py-20 ">
+        <div className="w-full py-16 bg-[#F5F9FF]">
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
-                <h2 className="text-4xl font-bold text-center text-[#13253B] mb-16">
+                {/* Başlık */}
+                <h2 className="text-4xl font-bold text-center text-[#13253B] mb-12">
                     Hızlı Bağlantılar
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                {/* Bağlantılar */}
+                <div className="flex flex-col lg:flex-row gap-8">
                     {[
                         {
                             Icon: FiHeadphones,
                             title: "Ücretsiz Danışmanlık Alın",
                             description:
-                                "Uzmanlarımızdan ücretsiz danışmanlık alarak doğru tedavi hakkında bilgi edinirsiniz.",
+                                "Uzmanlarımızdan ücretsiz danışmanlık alarak doğru tedavi hakkında bilgi edinin.",
                             linkText: "Hemen Başlayın",
+                            bgColor: "bg-blue-50",
+                            iconBg: "bg-blue-100",
+                            textColor: "text-blue-600",
                         },
                         {
                             Icon: FiPhoneCall,
                             title: "Sizi Geri Arayalım",
                             description:
-                                "Bize bırakın, sizi en kısa sürede arayalım ve ihtiyaçlarınıza göre bir plan oluşturalım.",
+                                "Sizi en kısa sürede arayıp ihtiyaçlarınıza göre bir plan oluşturalım.",
                             linkText: "Bizi Arayın",
-                        },
-                        {
-                            Icon: FiInfo,
-                            title: "Sıkça Sorulan Sorular",
-                            description:
-                                "Hizmetlerimiz ve tedavi süreçlerimiz hakkında sıkça sorulan sorulara göz atın.",
-                            linkText: "Daha Fazla Bilgi",
+                            bgColor: "bg-green-50",
+                            iconBg: "bg-green-100",
+                            textColor: "text-green-600",
                         },
                     ].map((item, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="relative bg-transparent rounded-lg  p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between items-center text-center"
+                            className={`flex-1 flex items-center gap-6 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow ${item.bgColor}`}
                         >
-                            <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                                <item.Icon size={48} className="text-blue-600" />
-                            </div>
-                            <h3 className="text-2xl font-semibold text-[#13253B]">
-                                {item.title}
-                            </h3>
-                            <p className="text-lg text-gray-600 mt-4">
-                                {item.description}
-                            </p>
-                            <a
-                                href="#"
-                                className="mt-6 inline-block text-lg font-semibold text-blue-600 hover:underline"
+                            {/* İkon */}
+                            <div
+                                className={`w-16 h-16 flex items-center justify-center rounded-full ${item.iconBg}`}
                             >
-                                {item.linkText}
-                            </a>
-                        </motion.div>
+                                <item.Icon size={32} className={`${item.textColor}`} />
+                            </div>
+
+                            {/* İçerik */}
+                            <div>
+                                <h3 className={`text-xl font-semibold ${item.textColor}`}>
+                                    {item.title}
+                                </h3>
+                                <p className="text-gray-700 mt-2 text-sm">{item.description}</p>
+                                <a
+                                    href="#"
+                                    className={`mt-3 inline-block font-medium hover:underline ${item.textColor}`}
+                                >
+                                    {item.linkText}
+                                </a>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

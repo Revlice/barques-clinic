@@ -1,101 +1,82 @@
-import React from 'react';
-import video from '../assets/Banner.mp4';
 import { motion } from 'framer-motion';
 import { FaUserEdit, FaWhatsapp } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import resim1 from '../assets/WhatsApp Image 2024-11-16 at 16.31.02.jpeg';
+import resim2 from '../assets/WhatsApp Image 2024-11-16 at 16.31.03.jpeg';
+import resim3 from '../assets/WhatsApp Image 2024-11-16 at 16.31.03 (1).jpeg';
+import resim4 from '../assets/WhatsApp Image 2024-11-16 at 16.31.03 (2).jpeg';
 
 const Main = () => {
-    // Animasyon Ayarları
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { delay: 0.5, staggerChildren: 0.3 },
-        },
-    };
+    const navigate = useNavigate();
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-    };
- const navigate = useNavigate();
+    // Resim slider için state
+    const images = [resim1, resim2, resim3, resim4];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000); // 3 saniyede bir resim değişimi
+
+        return () => clearInterval(interval); // Component unmount olduğunda interval temizlenir
+    }, []);
+
     return (
         <div className="relative w-full h-screen overflow-hidden">
-            {/* Arka Plan Video */}
-            <video
-                className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
-                loop
-                autoPlay
-                muted
-                style={{touchAction: 'none'}}>
-                <source src={video} className="pointer-events-none" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-white"></div>
+            {/* Arka Plan Image Slider */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                <img
+                    src={images[currentImageIndex]}
+                    alt="slider image"
+                    className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000"
+                />
+            </div>
 
             {/* İçerik */}
-            <motion.div
-                className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 sm:px-10 md:px-16 space-y-8"
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}>
-
-                {/* Başlık ve Açıklama */}
-                <motion.h1
-                    className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide drop-shadow-lg"
-                    variants={itemVariants}>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 sm:px-10 md:px-16 space-y-8 bg-black bg-opacity-50">
+                {/* Başlık */}
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight drop-shadow-md">
                     Barques Clinic'e Hoş Geldiniz
-                </motion.h1>
-                <motion.h3
-                    className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto"
-                    variants={itemVariants}>
-                    Kişiselleştirilmiş En Yeni Tedavi Yöntemleri
-                </motion.h3>
-                <motion.p
-                    className="text-sm sm:text-md md:text-lg text-blue-100 max-w-2xl mx-auto"
-                    variants={itemVariants}>
-                    Tıbbı Hizmetler ve Bütünsel Sağlık
-                </motion.p>
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl max-w-3xl leading-relaxed text-gray-200">
+                    Sağlıkta güven ve yeniliği bir arada sunan bir klinik deneyimi.
+                </p>
 
                 {/* Liste */}
-                <motion.div
-                    className=" text-left p-6 rounded-xl border-t-4 border-blue-500 max-w-3xl w-full"
-                    variants={itemVariants}>
-                    <ul className="space-y-4">
-                        <motion.li className="flex items-center" whileHover={{scale: 1.05}}>
-                            <TiTick className="text-blue-400 text-2xl mr-3"/>
-                            <span>Deneyimli ve uzman kadro</span>
-                        </motion.li>
-                        <motion.li className="flex items-center" whileHover={{scale: 1.05}}>
-                            <TiTick className="text-blue-400 text-2xl mr-3"/>
-                            <span>Güvenilir ve yenilikçi tedavi yöntemleri</span>
-                        </motion.li>
-                        <motion.li className="flex items-center" whileHover={{scale: 1.05}}>
-                            <TiTick className="text-blue-400 text-2xl mr-3"/>
-                            <span>Hasta memnuniyeti odaklı hizmet</span>
-                        </motion.li>
-                    </ul>
-                </motion.div>
+                <ul className="space-y-4 text-left max-w-3xl mx-auto">
+                    <li className="flex items-center space-x-4">
+                        <TiTick className="text-blue-500 text-2xl" />
+                        <span>Deneyimli ve uzman kadro</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                        <TiTick className="text-blue-500 text-2xl" />
+                        <span>Güvenilir ve yenilikçi tedavi yöntemleri</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                        <TiTick className="text-blue-500 text-2xl" />
+                        <span>Hasta memnuniyeti odaklı hizmet</span>
+                    </li>
+                </ul>
 
                 {/* Randevu Butonu */}
-                <motion.button onClick={() => navigate("/contact")}
-                               className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 flex items-center"
-                               whileHover={{scale: 1.1}}
-                               variants={itemVariants}>
-                    <FaUserEdit className="mr-3 text-2xl"/> Randevu Alın
-                </motion.button>
-            </motion.div>
+                <button
+                    onClick={() => navigate("/contact")}
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300"
+                >
+                    <FaUserEdit className="inline-block mr-2 text-lg" />
+                    Randevu Alın
+                </button>
+            </div>
 
             {/* WhatsApp Butonu */}
-            <div
-                className="fixed bottom-6 right-6 z-50">
+            <div className="fixed bottom-6 right-6 z-50">
                 <a href="https://wa.me/905060326301" target="_blank" rel="noopener noreferrer">
                     <button
-                        className="bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transform transition-all duration-300 hover:scale-110">
-                        <FaWhatsapp className="text-3xl"/>
+                        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300"
+                    >
+                        <FaWhatsapp className="text-2xl" />
                     </button>
                 </a>
             </div>

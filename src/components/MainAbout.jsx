@@ -30,7 +30,7 @@ const MainAbout = () => {
     };
 
     return (
-        <div className="w-full min-h-screen bg-[#F4F7FA]">
+        <div className="w-full min-h-screen pt-12 bg-[#F4F7FA]">
             <div className="container mx-auto px-4 sm:px-6 py-12 border-t-4 rounded-t-2xl pt-12 border-t-blue-500">
                 <div className="text-center md:text-left">
                     <h1 className="text-blue-500 text-xl font-semibold">

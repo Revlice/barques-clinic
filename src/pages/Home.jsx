@@ -5,6 +5,7 @@ import Connections from '../components/Connections.jsx';
 import Footer from '../components/Footer.jsx';
 import Services from '../components/Services.jsx';
 import MainAbout from '../components/MainAbout.jsx';
+import HairTransplantInfo from "../components/HairTransplantInfo.jsx";
 
 const Home = ()=>{
     return(
@@ -12,9 +13,10 @@ const Home = ()=>{
             <Information/>
             <Header/>
             <Main/>
-            <Connections/>
-            <Services/>
             <MainAbout/>
+            <Services/>
+            <HairTransplantInfo/>
+            <Connections/>
             <Footer/>
         </>
     )
