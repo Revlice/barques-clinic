@@ -12,6 +12,7 @@ import ENContact from './country/en/pages/Contact.jsx';
 import ENHairTransplant from './country/en/pages/HairTransplant.jsx';
 import ENPrivacyPolicy from './country/en/pages/PrivacyPolicy.jsx';
 import ENClinic from './country/en/pages/Clinic.jsx';
+import NotFound from "./404/NotFound.jsx";
 
 function App(){
 
@@ -25,6 +26,8 @@ function App(){
                 <Route path="/about/privacy-policy" element={<PrivacyPolicy/>}/>
                 <Route path="/about/clinic" element={<Clinic/>}/>
 
+                <Route path="*" element={<NotFound/>}/>
+
                 {/*ingilizce*/}
                 <Route path="/en" element={<ENHome/>}/>
                 <Route path="/en/about" element={<ENAbout/>} />
@@ -32,6 +35,7 @@ function App(){
                 <Route path="/en/technics" element={<ENHairTransplant/>}/>
                 <Route path="/en/about/privacy-policy" element={<ENPrivacyPolicy/>}/>
                 <Route path="/en/about/clinic" element={<ENClinic/>}/>
+
             </Routes>
         </>
     )
