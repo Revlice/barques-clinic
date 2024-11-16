@@ -26,6 +26,7 @@ const Main = () => {
             <video
                 className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
                 loop
+                autoPlay
                 muted
                 style={{touchAction: 'none'}}>
                 <source src={video} className="pointer-events-none" type="video/mp4"/>
