@@ -1,12 +1,12 @@
+import { motion } from 'framer-motion';
+import { FaHandHoldingHeart, FaMedkit, FaRegLightbulb, FaStar } from 'react-icons/fa';
+import Logo from '../assets/logo2.jpeg';
 import Information from '../components/Information.jsx';
 import Header from '../components/Header.jsx';
-import { motion } from 'framer-motion';
-import { FaHandHoldingHeart, FaUserMd, FaMedkit } from 'react-icons/fa';
-import Logo from '../assets/logo2.jpeg';
-
+import Footer from '../components/Footer.jsx';
 const About = () => {
 
-    // Animasyon Ayarları
+    // Animation Settings
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -22,8 +22,8 @@ const About = () => {
 
     return (
         <>
-            <Information />
-            <Header />
+            <Information/>
+            <Header/>
             <div className="w-full min-h-screen bg-gradient-to-b from-[#f9fbfd] to-[#f4f7fa] py-16">
                 <div className="container mx-auto px-6">
 
@@ -37,11 +37,11 @@ const About = () => {
                         <motion.img
                             src={Logo}
                             alt="Barques Clinic Logo"
-                            className="mx-auto mb-6 w-auto h-52 rounded-lg"
+                            className="mx-auto mb-6 w-40 h-auto rounded-full"
                             variants={itemVariants}
                         />
                         <motion.h1
-                            className="text-4xl sm:text-5xl font-bold text-[#12253B] mb-4"
+                            className="text-4xl sm:text-5xl font-extrabold text-[#12253B] mb-4"
                             variants={itemVariants}
                         >
                             Hakkımızda
@@ -56,47 +56,52 @@ const About = () => {
                         </motion.p>
                     </motion.div>
 
-                    {/* Misyon, Vizyon ve Değerler */}
+                    {/* Misyon, Vizyon, Değerler */}
                     <motion.div
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16"
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
                     >
+
+                        {/* Misyonumuz */}
                         <motion.div
-                            className="bg-white rounded-lg shadow-xl p-8 text-center hover:shadow-2xl transition-shadow"
+                            className="bg-white rounded-xl shadow-xl p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl"
                             variants={itemVariants}
                         >
-                            <FaHandHoldingHeart className="text-4xl text-blue-600 mb-4" />
-                            <h3 className="text-2xl font-semibold text-[#12253B] mb-2">Misyonumuz</h3>
-                            <p className="text-gray-600">
+                            <FaHandHoldingHeart className="text-6xl text-blue-600 mb-6 transition-transform transform hover:scale-110" />
+                            <h3 className="text-2xl font-semibold text-[#12253B] mb-4">Misyonumuz</h3>
+                            <p className="text-gray-600 text-base sm:text-lg">
                                 Hasta odaklı yaklaşımımızla en yüksek standartlarda sağlık hizmeti sunmak, tedavi süreçlerini
                                 en iyi şekilde yönetmektir.
                             </p>
                         </motion.div>
 
+                        {/* Vizyonumuz */}
                         <motion.div
-                            className="bg-white rounded-lg shadow-xl p-8 text-center hover:shadow-2xl transition-shadow"
+                            className="bg-white rounded-xl shadow-xl p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl"
                             variants={itemVariants}
                         >
-                            <FaUserMd className="text-4xl text-blue-600 mb-4" />
-                            <h3 className="text-2xl font-semibold text-[#12253B] mb-2">Uzman Kadro</h3>
-                            <p className="text-gray-600">
-                                Alanında uzman doktorlarımız ve sağlık personelimizle, hastalarımıza kaliteli tedavi ve bakım
-                                sunuyoruz.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            className="bg-white rounded-lg shadow-xl p-8 text-center hover:shadow-2xl transition-shadow"
-                            variants={itemVariants}
-                        >
-                            <FaMedkit className="text-4xl text-blue-600 mb-4" />
-                            <h3 className="text-2xl font-semibold text-[#12253B] mb-2">Vizyonumuz</h3>
-                            <p className="text-gray-600">
+                            <FaMedkit className="text-6xl text-blue-600 mb-6 transition-transform transform hover:scale-110" />
+                            <h3 className="text-2xl font-semibold text-[#12253B] mb-4">Vizyonumuz</h3>
+                            <p className="text-gray-600 text-base sm:text-lg">
                                 Sağlık hizmetlerinde öncü olmak ve yenilikçi çözümler sunarak sektörün lideri olmaktır.
                             </p>
                         </motion.div>
+
+                        {/* Değerlerimiz */}
+                        <motion.div
+                            className="bg-white rounded-xl shadow-xl p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl"
+                            variants={itemVariants}
+                        >
+                            <FaStar className="text-6xl text-blue-600 mb-6 transition-transform transform hover:scale-110" />
+                            <h3 className="text-2xl font-semibold text-[#12253B] mb-4">Değerlerimiz</h3>
+                            <p className="text-gray-600 text-base sm:text-lg">
+                                Müşteri memnuniyetini ön planda tutarak, güvenilir ve kaliteli hizmet anlayışıyla sağlık
+                                sektörüne katkı sağlamak.
+                            </p>
+                        </motion.div>
+
                     </motion.div>
 
                     {/* Neden Bizi Seçmelisiniz? */}
@@ -107,13 +112,13 @@ const About = () => {
                         variants={containerVariants}
                     >
                         <motion.h2
-                            className="text-3xl font-semibold text-[#12253B] mb-6"
+                            className="text-3xl sm:text-4xl font-semibold text-[#12253B] mb-6"
                             variants={itemVariants}
                         >
                             Neden Barques Clinic?
                         </motion.h2>
                         <motion.p
-                            className="text-lg text-gray-700 max-w-3xl mx-auto mb-8"
+                            className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto mb-8"
                             variants={itemVariants}
                         >
                             Barques Clinic, modern altyapısı, deneyimli kadrosu ve en son tıbbi teknolojiyle hastalarına
@@ -122,7 +127,7 @@ const About = () => {
 
                         <motion.a
                             href="/contact"
-                            className="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-full shadow-md hover:bg-blue-700 transition-all duration-300"
+                            className="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
                             whileHover={{ scale: 1.05 }}
                             variants={itemVariants}
                         >
@@ -131,6 +136,7 @@ const About = () => {
                     </motion.div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
