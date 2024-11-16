@@ -14,11 +14,6 @@ const Main = () => {
             transition: { delay: 0.5, staggerChildren: 0.3 },
         },
     };
-    const handleVideoClick = (event) => {
-        if (window.innerWidth <= 768) {  // Mobil ekran boyutunu kontrol et
-            event.preventDefault();  // Video başlatılmasını engelle
-        }
-    };
 
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -30,7 +25,6 @@ const Main = () => {
             {/* Arka Plan Video */}
             <video
                 className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
-                onClick={handleVideoClick} // Tıklama sonrası kontrolleri ekledik
                 loop
                 muted
                 style={{touchAction: 'none'}}>
