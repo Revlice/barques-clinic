@@ -26,7 +26,7 @@ const Main = () => {
             <video
                 className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
                 autoPlay loop muted style={{touchAction: 'none'}}>
-                <source src={video} className="pointer-events-none" type="video/mp4"/>
+                <source src={video} className="pointer-events-none"  type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
 
@@ -87,18 +87,15 @@ const Main = () => {
             </motion.div>
 
             {/* WhatsApp Butonu */}
-            <motion.div
-                className="fixed bottom-6 right-6 z-50"
-                initial={{scale: 0}}
-                animate={{scale: 1}}
-                transition={{type: "spring", stiffness: 120}}>
+            <div
+                className="fixed bottom-6 right-6 z-50">
                 <a href="https://wa.me/905060326301" target="_blank" rel="noopener noreferrer">
                     <button
                         className="bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transform transition-all duration-300 hover:scale-110">
                         <FaWhatsapp className="text-3xl"/>
                     </button>
                 </a>
-            </motion.div>
+            </div>
         </div>
     );
 };
