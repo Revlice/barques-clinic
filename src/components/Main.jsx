@@ -25,8 +25,8 @@ const Main = () => {
             {/* Arka Plan Video */}
             <video
                 className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
-                autoPlay loop muted>
-                <source src={video} type="video/mp4" />
+                autoPlay loop muted style={{touchAction: 'none'}}>
+                <source src={video} type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
 
@@ -78,10 +78,10 @@ const Main = () => {
                 </motion.div>
 
                 {/* Randevu Butonu */}
-                <motion.button onClick={()=>navigate("/contact")}
-                    className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 flex items-center"
-                    whileHover={{scale: 1.1}}
-                    variants={itemVariants}>
+                <motion.button onClick={() => navigate("/contact")}
+                               className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 flex items-center"
+                               whileHover={{scale: 1.1}}
+                               variants={itemVariants}>
                     <FaUserEdit className="mr-3 text-2xl"/> Randevu Alın
                 </motion.button>
             </motion.div>
@@ -91,10 +91,11 @@ const Main = () => {
                 className="fixed bottom-6 right-6 z-50"
                 initial={{scale: 0}}
                 animate={{scale: 1}}
-                transition={{type: "spring", stiffness: 120 }}>
+                transition={{type: "spring", stiffness: 120}}>
                 <a href="https://wa.me/905060326301" target="_blank" rel="noopener noreferrer">
-                    <button className="bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transform transition-all duration-300 hover:scale-110">
-                        <FaWhatsapp className="text-3xl" />
+                    <button
+                        className="bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transform transition-all duration-300 hover:scale-110">
+                        <FaWhatsapp className="text-3xl"/>
                     </button>
                 </a>
             </motion.div>
