@@ -19,7 +19,7 @@ const HairTransplantInfo = () => {
                         <FaUserMd className="mr-3 text-blue-500" /> Saç Ekimi Nedir?
                     </h2>
                     <p className="text-lg text-gray-700 leading-relaxed">
-                        Saç ekimi, dökülen bölgelere, ense bölgesinden alınan saç köklerinin (greftlerin) nakil edilmesidir. Uzman hekimler
+                        Saç ekimi, dökülen bölgelere, ense bölgesinden alınan saç köklerinin (graftların) nakil edilmesidir. Uzman hekimler
                         tarafından yapılması gereken, ciddi bir operasyondur. Saç ekimi estetik kaygıları gidermek amacıyla tercih edilse de,
                         sağlıklı bir uygulama olması için uzmanlık gereklidir.
                     </p>
@@ -65,11 +65,11 @@ const HairTransplantInfo = () => {
                         <img src={logo} alt="Logo" className="h-12" />
                     </div>
                     <h2 className="text-2xl font-semibold text-blue-500 mb-4 flex items-center">
-                        <FaSyringe className="mr-3 text-blue-500" /> Greftlerin Ekilmesi
+                        <FaSyringe className="mr-3 text-blue-500" /> Graftlerin Ekilmesi
                     </h2>
                     <p className="text-lg text-gray-700 leading-relaxed">
                         Son aşamada, toplanan saç kökleri tek tek açılan kanallara ekilir. Bu işlem sırasında, saç köklerinin doğru yönde ve
-                        açıda ekilmesine özen gösterilir. Greftlerin ekimi, genellikle birkaç saat sürebilir ve seanslar halinde
+                        açıda ekilmesine özen gösterilir. Graftlerin ekimi, genellikle birkaç saat sürebilir ve seanslar halinde
                         gerçekleştirilebilir.
                     </p>
                 </section>

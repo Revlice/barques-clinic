@@ -35,10 +35,10 @@ const HairTransplant = () => {
                             </div>
                             <p className="text-lg md:text-xl mb-6">
                                 FUE (Follicular Unit Extraction)
-                                FUE, saç naklinde greftlerin çıkarılması aşamasında kullanılan teknik olup, saç nakli cerrahisi alanındaki son gelişmedir.
-                                FUE tekniğinde greftler mikro punchlar kullanılarak donör bölgesinden (saç alimi yapılacak iki kulak arasında kalan alan) alınır.
-                                FUE tekniği çok sayıda greftin, donör bölgesinde minimal yara izi ile alınmasını saglar. FUE tekniğinde saç derisinde herhangi bir kesi yapılmaz.
-                                FUE tekniği, diğer tekniklere oranla daha fazla greft alınmasını / çıkarılmasını saglar. FUE tekniği, diğer tekniklere oranla ekilecek greft sayısını artırır ve hastanın daha şık/yoğun bir saça kavuşmasına olanak saglar.
+                                FUE, saç naklinde graftlarin çıkarılması aşamasında kullanılan teknik olup, saç nakli cerrahisi alanındaki son gelişmedir.
+                                FUE tekniğinde graftlar mikro punchlar kullanılarak donör bölgesinden (saç alimi yapılacak iki kulak arasında kalan alan) alınır.
+                                FUE tekniği çok sayıda graftın, donör bölgesinde minimal yara izi ile alınmasını saglar. FUE tekniğinde saç derisinde herhangi bir kesi yapılmaz.
+                                FUE tekniği, diğer tekniklere oranla daha fazla graft alınmasını / çıkarılmasını saglar. FUE tekniği, diğer tekniklere oranla ekilecek graft sayısını artırır ve hastanın daha şık/yoğun bir saça kavuşmasına olanak saglar.
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-start space-x-3">
@@ -47,7 +47,7 @@ const HairTransplant = () => {
                                 </li>
                                 <li className="flex items-start space-x-3">
                                     <FaRegCheckCircle size={22} className="text-blue-400" />
-                                    <p className="text-lg">Daha fazla greft alımı.</p>
+                                    <p className="text-lg">Daha fazla graft alımı.</p>
                                 </li>
                                 <li className="flex items-start space-x-3">
                                     <FaRegCheckCircle size={22} className="text-blue-400" />
@@ -73,8 +73,8 @@ const HairTransplant = () => {
                             </div>
                             <p className="text-lg md:text-xl mb-6">
                                 DHI saç ekimi, "implanter pen" olarak adlandırılan özel cihazlar kullanılarak gerçekleştirilen en gelişmiş saç ekimi yöntemlerinden birisidir. Direct Hair Implantation olarak açılımı yapılabilen DHI saç ekimi tekniği, Türkçeye "Doğrudan Saç Ekimi" olarak gevrilmektedir.
-                                DHI tekniğinin son yıllarda öne çıkmasının en önemli sebeplerinden birisi, kesi açılmayan iki aşamalı bir yöntem olmasidir. Diğer saç ekimi tekniklerinde greft toplama, kanal açma ve greft ekimi olarak üç açamada gerçeklestirilen saç ekimi, DHI yöntemi kullanılarak greft toplama ve greft ekimi şeklinde iki temel aşama ile gerçeklestirilmektedir.
-                                Saç ekiminin iki aşamaya indirilebilmesinde en önemli etken, implanter pen cihazlarinin kullanilmasidir. Cihaz içerisine greft yerlegtirildikten sonra cilt delinerek greft doğrudan cildin içerisine bırakılmalıdır. Bu sayede kanal açma ve greft ekimi işlemleri aynı anda gerçeklestirilebilmektedir.
+                                DHI tekniğinin son yıllarda öne çıkmasının en önemli sebeplerinden birisi, kesi açılmayan iki aşamalı bir yöntem olmasidir. Diğer saç ekimi tekniklerinde graft toplama, kanal açma ve graft ekimi olarak üç açamada gerçeklestirilen saç ekimi, DHI yöntemi kullanılarak graft toplama ve graft ekimi şeklinde iki temel aşama ile gerçeklestirilmektedir.
+                                Saç ekiminin iki aşamaya indirilebilmesinde en önemli etken, implanter pen cihazlarinin kullanilmasidir. Cihaz içerisine graft yerlegtirildikten sonra cilt delinerek graft doğrudan cildin içerisine bırakılmalıdır. Bu sayede kanal açma ve graft ekimi işlemleri aynı anda gerçeklestirilebilmektedir.
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-start space-x-3">
@@ -111,12 +111,12 @@ const HairTransplant = () => {
                             </div>
                             <p className="text-lg md:text-xl mb-6">
                                 MANUEL FUE tekniği, donör bölgesinde herhangi yara izi bırakmadan, optimum
-                                sayıda ve kalitede greftlerin tek tek alınması / extraction işlemi ile yapılır.
+                                sayıda ve kalitede graftların tek tek alınması / extraction işlemi ile yapılır.
                                 Manuel Fue tekniği hassas bir dokunuş, fiziksel dayanıklılık, mükemmel bir el-göz
                                 koordinasyonu ve el motor becerisi gerektirir. Manuel FUE tekniği ile extraction
-                                işlemi, el ile greftlerin hissedilerek tek tek çıkarıldığı ve greft kaybının
+                                işlemi, el ile graftların hissedilerek tek tek çıkarıldığı ve graft kaybının
                                 olmadığı bir tekniktir. Manuel FUE tekniğinin temel amacı, extraction işlemi
-                                sırasında greftlerin ve donör bölgesinin zarar görmemesi ve donör bölgesinin
+                                sırasında graftların ve donör bölgesinin zarar görmemesi ve donör bölgesinin
                                 homojenliğinin korunmasıdır. Homojenliğin korunuyor olması sebebiyle birden fazla
                                 seans sonra bile, donör alanındaki yoğunluk ancak yakın muayene ile görülebilmektedir.
                                 Her bir hastanın kafa yapısı, saçların yönü ve açısı birbirinden farklı olabildiğinden,
@@ -129,7 +129,7 @@ const HairTransplant = () => {
                                 </li>
                                 <li className="flex items-start space-x-3">
                                     <FaRegCheckCircle size={22} className="text-blue-400" />
-                                    <p className="text-lg">Greft kaybı olmaz, doğal sonuçlar elde edilir.</p>
+                                    <p className="text-lg">Graft kaybı olmaz, doğal sonuçlar elde edilir.</p>
                                 </li>
                                 <li className="flex items-start space-x-3">
                                     <FaRegCheckCircle size={22} className="text-blue-400" />
