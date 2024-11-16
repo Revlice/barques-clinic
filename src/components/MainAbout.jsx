@@ -47,7 +47,7 @@ const MainAbout = () => {
                     {/* Sol Taraf */}
                     <div className="flex-1">
                         <div className="flex flex-col space-y-4">
-                            <div className="flex justify-between border-b border-b-blue-500 py-2">
+                            <div className="flex flex-col justify-between border-b border-b-blue-500 py-2">
                                 <h3 className="text-lg text-[#12253B] font-semibold">
                                     Hakkımızda
                                 </h3>
@@ -56,7 +56,7 @@ const MainAbout = () => {
                                     hizmetleri sunmaktadır.
                                 </p>
                             </div>
-                            <div className="flex justify-between border-b border-b-blue-500 py-2">
+                            <div className="flex flex-col  justify-between border-b border-b-blue-500 py-2">
                                 <h3 className="text-lg text-[#12253B] font-semibold">
                                     Konumumuz
                                 </h3>
@@ -64,7 +64,7 @@ const MainAbout = () => {
                                     Doğu, Bilge Sk. No:1, 34890 Pendik/İstanbul
                                 </p>
                             </div>
-                            <div className="flex justify-between border-b border-b-blue-500 py-2">
+                            <div className="flex flex-col  justify-between border-b border-b-blue-500 py-2">
                                 <h3 className="text-lg text-[#12253B] font-semibold">
                                     Tedavilerimiz
                                 </h3>
