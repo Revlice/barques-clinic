@@ -5,3 +5,11 @@
 body{
     @apply font-roboto
 }
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+
+video {
+    pointer-events: none;
+    touch-action: none;
+}
