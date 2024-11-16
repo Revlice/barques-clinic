@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Connections = () => {
     return (
-        <div className="w-full py-20 bg-gradient-to-b from-[#eaf4ff] via-[#f4f7fa] to-[#dbe8ff]">
+        <div className="w-full py-20 ">
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
                 <h2 className="text-4xl font-bold text-center text-[#13253B] mb-16">
                     Hızlı Bağlantılar
@@ -38,7 +38,7 @@ const Connections = () => {
                             key={index}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="relative bg-white rounded-lg border border-gray-200 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between items-center text-center"
+                            className="relative bg-transparent rounded-lg  p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col justify-between items-center text-center"
                         >
                             <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mb-6">
                                 <item.Icon size={48} className="text-blue-600" />

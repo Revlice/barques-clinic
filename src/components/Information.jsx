@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaEnvelope,FaYoutube, FaInstagram } from "react-icons/fa";
+import {FaPhoneAlt, FaEnvelope, FaYoutube, FaInstagram, FaWhatsapp} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Information = () => {
@@ -27,11 +27,13 @@ const Information = () => {
 
                 {/* Sosyal Medya İkonları */}
                 <div className="flex items-center space-x-3">
-                    <a href="#" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
-                        <FaYoutube className="text-[#13253B] text-lg" />
+                    <a href="https://www.instagram.com/barqueshairclinic?igsh=MWZxN2c0cnFicWwzMQ%3D%3D" target="_blank"
+                       className="p-2 rounded-full text-white transition">
+                        <FaInstagram className="text-white  hover:text-orange-500 text-2xl"/>
                     </a>
-                    <a href="https://www.instagram.com/barqueshairclinic?igsh=MWZxN2c0cnFicWwzMQ%3D%3D" target="_blank" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
-                        <FaInstagram className="text-[#13253B] text-lg" />
+                    <a href="https://wa.me/905060326301" target="_blank"
+                       className="p-2 rounded-full  transition">
+                        <FaWhatsapp className="text-white hover:text-green-500 text-2xl"/>
                     </a>
                 </div>
             </div>

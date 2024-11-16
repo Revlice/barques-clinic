@@ -37,8 +37,8 @@ const MainAbout = () => {
                         BARQUES HAKKINDA
                     </h1>
                     <div className="mt-8">
-                        <h2 className="font-bold text-4xl md:text-5xl text-[#12253B]">
-                            Değişen Hayat, <br /> Artan Güven
+                        <h2 className="font-bold w-1/2 text-3xl md:text-4xl text-[#12253B]">
+                            Barques Clinic ile, Hayalindeki <br/> Görünüme Kavuş!
                         </h2>
                     </div>
                 </div>

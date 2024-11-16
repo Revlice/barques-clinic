@@ -1,4 +1,4 @@
-import {FaLinkedin, FaTiktok, FaYoutube, FaInstagram } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 import logo from '../assets/logo.png';
 import { PiCodeDuotone } from "react-icons/pi";
@@ -80,20 +80,20 @@ const Footer = () => {
             <div className="mt-10 border-t border-gray-700 pt-6 text-center">
                 <div className="flex justify-center space-x-6 mb-4">
                     <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-blue-400 transition"
-                    >
-                        <FaYoutube size={24}/>
-                    </a>
-                    <a
                         href="https://www.instagram.com/barqueshairclinic?igsh=MWZxN2c0cnFicWwzMQ%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-blue-400 transition"
+                        className="text-gray-400 hover:text-orange-400 transition"
                     >
                         <FaInstagram size={24}/>
+                    </a>
+                    <a
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-green-400 transition"
+                    >
+                        <FaWhatsapp size={24}/>
                     </a>
                 </div>
                 <p className="text-sm text-gray-500">
@@ -101,7 +101,7 @@ const Footer = () => {
                 </p>
                 <div className="flex justify-center items-center">
                     <p className="text-sm text-gray-500 flex items-center hover:text-blue-500">
-                        <PiCodeDuotone className="mr-2 text-lg text-gray-500 hover:text-blue-500"/>
+                    <PiCodeDuotone className="mr-2 text-lg text-gray-500 hover:text-blue-500"/>
                         <a className="hover:text-blue-500 text-gray-500" href="https://rahmicantut.com/"> coded by
                             revlice</a>
                     </p>

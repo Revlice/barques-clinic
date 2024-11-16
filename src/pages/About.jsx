@@ -37,7 +37,7 @@ const About = () => {
                         <motion.img
                             src={Logo}
                             alt="Barques Clinic Logo"
-                            className="mx-auto mb-6 w-52 h-52 object-contain rounded-xl"
+                            className="mx-auto mb-6 w-auto h-52 rounded-lg"
                             variants={itemVariants}
                         />
                         <motion.h1

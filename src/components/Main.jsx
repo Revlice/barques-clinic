@@ -3,6 +3,7 @@ import video from '../assets/Banner.mp4';
 import { motion } from 'framer-motion';
 import { FaUserEdit, FaWhatsapp } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
+import {useNavigate} from "react-router-dom";
 
 const Main = () => {
     // Animasyon Ayarları
@@ -18,7 +19,7 @@ const Main = () => {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
-
+ const navigate = useNavigate();
     return (
         <div className="relative w-full h-screen overflow-hidden">
             {/* Arka Plan Video */}
@@ -30,7 +31,7 @@ const Main = () => {
             </video>
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-[#f4f7fa]"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-white"></div>
 
             {/* İçerik */}
             <motion.div
@@ -77,7 +78,7 @@ const Main = () => {
                 </motion.div>
 
                 {/* Randevu Butonu */}
-                <motion.button
+                <motion.button onClick={()=>navigate("/contact")}
                     className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 flex items-center"
                     whileHover={{scale: 1.1}}
                     variants={itemVariants}>
