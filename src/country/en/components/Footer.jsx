@@ -1,77 +1,77 @@
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
-import logo from '../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import { PiCodeDuotone } from "react-icons/pi";
 
 const Footer = () => {
     return (
         <footer className="bg-logoColor text-white py-10">
             <div className="container mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-                {/* Sol Bölüm: Logo ve Klinik Hakkında */}
+                {/* Left Section: Logo and About the Clinic */}
                 <div className="space-y-4">
                     <img
                         src={logo}
-                        alt="Klinik Logo"
+                        alt="Clinic Logo"
                         className="w-40"
                     />
                     <p className="text-gray-400 leading-relaxed">
-                        Modern tıbbi hizmetlerimizle hastalarımızın memnuniyetini her zaman ön planda tutuyoruz.
+                        With our modern medical services, we always prioritize our patients' satisfaction.
                     </p>
                 </div>
 
-                {/* Orta Bölüm: Hızlı Bağlantılar */}
+                {/* Middle Section: Quick Links */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h3>
+                    <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul className="space-y-2">
                         <li>
                             <a
-                                href="/"
+                                href="/en"
                                 className="text-gray-400 hover:text-blue-400 transition"
                             >
-                                Anasayfa
+                                Home
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/about"
+                                href="/en/about"
                                 className="text-gray-400 hover:text-blue-400 transition"
                             >
-                                Hakkımızda
+                                About Us
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/technics"
+                                href="/en/technics"
                                 className="text-gray-400 hover:text-blue-400 transition"
                             >
-                                Tekniklerimiz
+                                Our Techniques
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/contact"
+                                href="/en/contact"
                                 className="text-gray-400 hover:text-blue-400 transition"
                             >
-                                İletişim
+                                Contact
                             </a>
                         </li>
                         <li>
                             <a
-                                href="/privacy-policy"
+                                href="/en/privacy-policy"
                                 className="text-gray-400 hover:text-blue-400 transition"
                             >
-                                Gizlilik Politikası
+                                Privacy Policy
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                {/* Sağ Bölüm: İletişim Bilgileri */}
+                {/* Right Section: Contact Information */}
                 <div className="space-y-4">
-                    <h3 className="text-lg font-semibold mb-4">İletişim Bilgileri</h3>
+                    <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
                     <div className="flex items-center space-x-3">
                         <FiMapPin size={20} className="text-blue-400" />
-                        <span className="text-gray-400">Adres : Doğu, Bilge Sk. No:1, 34890 Pendik/İstanbul</span>
+                        <span className="text-gray-400">Address: Doğu, Bilge Sk. No:1, 34890 Pendik/Istanbul</span>
                     </div>
                     <div className="flex items-center space-x-3">
                         <FiPhone size={20} className="text-blue-400" />
@@ -84,7 +84,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Alt Kısım: Sosyal Medya ve Telif Hakkı */}
+            {/* Bottom Section: Social Media and Copyright */}
             <div className="mt-10 border-t border-gray-700 pt-6 text-center">
                 <div className="flex justify-center space-x-6 mb-4">
                     <a
@@ -105,11 +105,11 @@ const Footer = () => {
                     </a>
                 </div>
                 <p className="text-sm text-gray-500">
-                    © 2024 Barques Clinic - Tüm Hakları Saklıdır.
+                    © 2024 Barques Clinic - All Rights Reserved.
                 </p>
                 <div className="flex justify-center items-center">
                     <p className="text-sm text-gray-500 flex items-center hover:text-blue-500">
-                    <PiCodeDuotone className="mr-2 text-lg text-gray-500 hover:text-blue-500"/>
+                        <PiCodeDuotone className="mr-2 text-lg text-gray-500 hover:text-blue-500"/>
                         <a className="hover:text-blue-500 text-gray-500" href="https://rahmicantut.com/"> coded by
                             revlice</a>
                     </p>

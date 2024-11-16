@@ -1,9 +1,8 @@
-import resim1 from "../assets/resim1.jpeg";
-import resim2 from "../assets/resim2.jpeg";
-import resim3 from "../assets/resim3.jpeg";
+import resim1 from '../../../assets/resim1.jpeg';
+import resim2 from '../../../assets/resim2.jpeg';
+import resim3 from '../../../assets/resim3.jpeg';
 import { useState, useEffect } from "react";
-import {useNavigate} from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 const MainAbout = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,54 +36,52 @@ const MainAbout = () => {
             <div className="container mx-auto px-4 sm:px-6 py-12 border-t-4 rounded-t-2xl pt-12 border-t-blue-500">
                 <div className="text-center md:text-left">
                     <h1 className="text-blue-500 text-xl font-semibold">
-                        BARQUES HAKKINDA
+                        ABOUT BARQUES
                     </h1>
                     <div className="mt-8">
                         <h2 className="font-bold w-full sm:w-3/4 md:w-1/2 text-3xl md:text-4xl text-[#12253B]">
-                            Barques Clinic ile, Hayalindeki <br /> Görünüme Kavuş!
+                            Achieve the Look of Your Dreams with Barques Clinic!
                         </h2>
                     </div>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center mt-8 gap-8">
-                    {/* Sol Taraf */}
+                    {/* Left Side */}
                     <div className="flex-1">
                         <div className="flex flex-col space-y-4">
                             <div className="flex flex-col justify-between border-b border-b-blue-500 py-2">
                                 <h3 className="text-lg text-[#12253B] font-semibold">
-                                    Hakkımızda
+                                    About Us
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
-                                    Özel Barques Kliniği, saç ekimi ve estetik
-                                    hizmetleri sunmaktadır.
+                                    Barques Clinic offers hair transplantation and aesthetic services.
                                 </p>
                             </div>
-                            <div className="flex flex-col  justify-between border-b border-b-blue-500 py-2">
+                            <div className="flex flex-col justify-between border-b border-b-blue-500 py-2">
                                 <h3 className="text-lg text-[#12253B] font-semibold">
-                                    Konumumuz
+                                    Our Location
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
-                                    Doğu, Bilge Sk. No:1, 34890 Pendik/İstanbul
+                                    Doğu, Bilge Sk. No:1, 34890 Pendik/Istanbul
                                 </p>
                             </div>
-                            <div className="flex flex-col  justify-between border-b border-b-blue-500 py-2">
+                            <div className="flex flex-col justify-between border-b border-b-blue-500 py-2">
                                 <h3 className="text-lg text-[#12253B] font-semibold">
-                                    Tedavilerimiz
+                                    Our Treatments
                                 </h3>
                                 <p className="text-gray-600 text-sm md:text-base">
-                                    Polikliniğimiz, saç ekimi ve estetik
-                                    alanında hizmet vermektedir.
+                                    Our clinic provides services in hair transplantation and aesthetics.
                                 </p>
                             </div>
                         </div>
                         <div className="mt-8">
-                            <button onClick={()=>navigate("/about")} className="p-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-all">
-                                Daha Fazla Göster
+                            <button onClick={() => navigate("/about")} className="p-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-all">
+                                Show More
                             </button>
                         </div>
                     </div>
 
-                    {/* Sağ Taraf - Image Slider */}
+                    {/* Right Side - Image Slider */}
                     <div className="flex-1 flex flex-col justify-center items-center">
                         <div className="relative w-full md:w-[500px] aspect-square overflow-hidden">
                             <div
@@ -102,14 +99,14 @@ const MainAbout = () => {
                                     />
                                 ))}
                             </div>
-                            {/* Sol Buton */}
+                            {/* Left Button */}
                             <button
                                 onClick={handlePrev}
                                 className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-blue-500 hover:text-white transition-all text-sm md:text-base"
                             >
                                 ‹
                             </button>
-                            {/* Sağ Buton */}
+                            {/* Right Button */}
                             <button
                                 onClick={handleNext}
                                 className="absolute top-1/2 right-2 md:right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-blue-500 hover:text-white transition-all text-sm md:text-base"
@@ -117,7 +114,7 @@ const MainAbout = () => {
                                 ›
                             </button>
                         </div>
-                        {/* Nokta İşaretçileri */}
+                        {/* Dot Indicators */}
                         <div className="flex justify-center mt-4 space-x-2">
                             {images.map((_, index) => (
                                 <div

@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import resim1 from "../assets/saçekimi/resim1.jpeg";
-import resim2 from "../assets/saçekimi/resim2.jpeg";
-import resim3 from "../assets/saçekimi/resim3.jpeg";
-import resim4 from "../assets/saçekimi/resim4.jpeg";
-import resim5 from "../assets/saçekimi/resim5.jpeg";
-import resim6 from "../assets/saçekimi/resim6.jpeg";
-import resim7 from "../assets/saçekimi/resim7.jpeg";
-import resim8 from "../assets/saçekimi/resim8.jpeg";
-import resim9 from "../assets/saçekimi/resim9.jpeg";
-import resim10 from "../assets/saçekimi/resim10.jpeg";
-import resim11 from "../assets/saçekimi/resim11.jpeg";
-import resim12 from "../assets/saçekimi/resim12.jpeg";
+import resim1 from "../../../assets/saçekimi/resim1.jpeg";
+import resim2 from "../../../assets/saçekimi/resim2.jpeg";
+import resim3 from "../../../assets/saçekimi/resim3.jpeg";
+import resim4 from "../../../assets/saçekimi/resim4.jpeg";
+import resim5 from "../../../assets/saçekimi/resim5.jpeg";
+import resim6 from "../../../assets/saçekimi/resim6.jpeg";
+import resim7 from "../../../assets/saçekimi/resim7.jpeg";
+import resim8 from "../../../assets/saçekimi/resim8.jpeg";
+import resim9 from "../../../assets/saçekimi/resim9.jpeg";
+import resim10 from "../../../assets/saçekimi/resim10.jpeg";
+import resim11 from "../../../assets/saçekimi/resim11.jpeg";
+import resim12 from "../../../assets/saçekimi/resim12.jpeg";
 import {useNavigate} from 'react-router-dom';
 
 const Services = () => {
@@ -27,7 +27,7 @@ const Services = () => {
     const [currentFUEIndex, setCurrentFUEIndex] = useState(0);
     const [currentDHIIndex, setCurrentDHIIndex] = useState(0);
 
-    // Otomatik slider geçişi
+    // Automatic slider transition
     useEffect(() => {
         const intervalFUE = setInterval(() => {
             setCurrentFUEIndex((prevIndex) => (prevIndex + 1) % FUEImages.length);
@@ -46,22 +46,21 @@ const Services = () => {
     return (
         <div className="w-full py-16 bg-gradient-to-r from-[#13253B] to-[#0A1F2D]">
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
-                {/* Başlık */}
+                {/* Title */}
                 <h2 className="text-5xl font-extrabold text-center text-white mb-12 tracking-tight">
-                    Saç Ekimi Tekniklerimiz
+                    Our Hair Transplant Techniques
                 </h2>
 
-                {/* Hizmet Kartları (Yan Yana) */}
+                {/* Service Cards (Side by side) */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* FUE Saç Ekimi */}
+                    {/* FUE Hair Transplant */}
                     <div
                         className="bg-white rounded-lg shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                         <h3 className="text-3xl font-bold text-[#13253B] p-6 border-b border-gray-200">
-                            FUE Saç Ekimi
+                            FUE Hair Transplant
                         </h3>
                         <p className="text-gray-700 p-6 text-sm lg:text-lg  border-t border-t-blue-500">
-                            FUE (Foliküler Ünite Ekstraksiyonu) yöntemi, saç köklerinin tek tek alınarak doğal bir
-                            görünüm sağlamak için ekildiği modern bir saç ekim tekniğidir.
+                            FUE (Follicular Unit Extraction) is a modern hair transplant technique where hair follicles are extracted one by one and implanted for a natural look.
                         </p>
 
                         {/* FUE Slider */}
@@ -90,7 +89,7 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            {/* Gösterge (Indicator) */}
+                            {/* Indicator */}
                             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                                 {FUEImages.map((_, index) => (
                                     <span
@@ -108,20 +107,20 @@ const Services = () => {
                         <div className="w-full flex  mb-4  justify-center items-center">
                             <button
                                 onClick={()=>navigate("/technics")}
-                                className="px-4 py-2 border hover:bg-blue-500 hover:text-white transition-all  rounded border-blue-500 text-blue-500">Daha
-                                Fazla Bilgi
+                                className="px-4 py-2 border hover:bg-blue-500 hover:text-white transition-all  rounded border-blue-500 text-blue-500">More
+                                Information
                             </button>
                         </div>
                     </div>
 
-                    {/* DHI Saç Ekimi */}
+                    {/* DHI Hair Transplant */}
                     <div
                         className="bg-white rounded-lg shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                         <h3 className="text-3xl font-bold text-[#13253B] p-6 border-b border-gray-200">
-                            DHI Saç Ekimi
+                            DHI Hair Transplant
                         </h3>
                         <p className="text-gray-700 p-6 text-sm lg:text-lg  border-t border-t-blue-500">
-                            DHI (Doğrudan Saç Ekimi) yöntemi, saç köklerinin özel bir kalemle doğrudan ekildiği ve daha yoğun bir görünüm kazandığı bir tekniktir.
+                            DHI (Direct Hair Implantation) is a technique where hair follicles are implanted directly with a special pen, resulting in a denser appearance.
                         </p>
 
                         {/* DHI Slider */}
@@ -150,7 +149,7 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            {/* Gösterge (Indicator) */}
+                            {/* Indicator */}
                             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                                 {DHIImages.map((_, index) => (
                                     <span
@@ -166,7 +165,7 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="w-full flex  mb-4  justify-center items-center">
-                            <button onClick={()=>navigate("/technics")} className="px-4 py-2 border hover:bg-blue-500 hover:text-white transition-all  rounded border-blue-500 text-blue-500">Daha Fazla Bilgi</button>
+                            <button onClick={()=>navigate("/technics")} className="px-4 py-2 border hover:bg-blue-500 hover:text-white transition-all  rounded border-blue-500 text-blue-500">More Information</button>
                         </div>
                     </div>
                 </div>

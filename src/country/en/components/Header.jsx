@@ -1,55 +1,56 @@
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaSyringe } from "react-icons/fa";
 import { motion } from "framer-motion";
-import logo from "../assets/logo2.jpeg";
+import logo from '../../../assets/logo2.jpeg';
 import { HiMiniBars2 } from "react-icons/hi2";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [treatmentDropdownOpen, setTreatmentDropdownOpen] = useState(false);
-    const [language, setLanguage] = useState('tr'); // Default to English
+    const [language, setLanguage] = useState('en'); // Default to English
     const navigate = useNavigate();
 
-    const liste = [
-        { name: "Anasayfa", go: "/" },
+    const menuList = [
+        { name: "Home", go: "/en" },
         {
-            name: "Hakkımızda",
-            go: "/about",
+            name: "About Us",
+            go: "/en/about",
             icon: MdKeyboardArrowDown,
             dropdown: [
-                { name: "Biz Kimiz?", go: "/about" },
-                { name: "Polikliniğimiz", go: "/about/clinic" },
-                { name: "Gizlilik Politikası", go: "/about/privacy-policy" },
+                { name: "Who We Are?", go: "/en/about" },
+                { name: "Our Clinic", go: "/en/about/clinic" },
+                { name: "Privacy Policy", go: "/en/about/privacy-policy" },
             ],
         },
         {
-            name: "Tekniklerimiz",
+            name: "Our Techniques",
             icon: MdKeyboardArrowDown,
-            go: "/technics",
+            go:"/en/technics",
             dropdown: [
-                { name: "FUE Saç Ekimi", go: "/technics", icon: FaSyringe },
-                { name: "DHI Saç Ekimi", go: "/technics", icon: FaSyringe },
-                { name: "Manuel FUE Saç Ekimi", go: "/technics", icon: FaSyringe },
+                { name: "FUE Hair Transplant", go: "/en/technics", icon: FaSyringe },
+                { name: "DHI Hair Transplant", go: "/en/technics", icon: FaSyringe },
+                { name: "Manual FUE Hair Transplant", go: "/en/technics", icon: FaSyringe },
             ],
         },
-        { name: "İletişim", go: "/contact" },
+        { name: "Contact", go: "/en/contact" },
     ];
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
     const toggleTreatmentDropdown = () => setTreatmentDropdownOpen(!treatmentDropdownOpen);
 
-    const handleLanguageChange = (e) => {
-        setLanguage(e.target.value);
-        const selectedLanguage = e.target.value;
-        
-        if (selectedLanguage === "en") {
-            navigate("/en");
-        } else {
+    const handleLanguageChange = (event) => {
+        const selectedLanguage = event.target.value;
+        setLanguage(selectedLanguage);
+
+        if (selectedLanguage === "tr") {
             navigate("/");
+        } else {
+            navigate("/en");
         }
     };
 
@@ -66,18 +67,18 @@ const Header = () => {
                 transition={{ duration: 0.3 }}
                 className="container mx-auto flex justify-between items-center p-4 md:p-6"
             >
-                {/* Logo ve Yardım Metni */}
+                {/* Logo and Help Text */}
                 <div className="flex items-center w-full md:w-auto space-x-6">
                     <img
-                        onClick={() => navigate("/")}
+                        onClick={() => navigate("/en")}
                         src={logo}
                         className="cursor-pointer w-20 md:w-auto h-20 md:h-24"
                         alt="logo"
                     />
                     <span className="hidden md:block text-white w-96 text-sm md:text-base font-medium border-l pl-6 border-l-blue-500/50">
-                        Yardıma mı ihtiyacınız var? <br />
+                        Need help? <br />
                         <span className="font-semibold cursor-pointer hover:underline hover:text-gray-200 transition">
-                            Bize Ulaşın
+                            Contact Us
                         </span>
                     </span>
                 </div>
@@ -99,26 +100,26 @@ const Header = () => {
                     transition={{ duration: 0.3 }}
                 >
                     <ul className="flex flex-col space-y-4 p-4">
-                        {liste.map((item, index) => (
+                        {menuList.map((item, index) => (
                             <li
                                 key={index}
                                 className="relative group text-center"
                                 onClick={() =>
-                                    item.name === "Hakkımızda"
+                                    item.name === "About Us"
                                         ? toggleDropdown()
-                                        : item.name === "Tekniklerimiz" &&
+                                        : item.name === "Our Techniques" &&
                                         toggleTreatmentDropdown()
                                 }
                                 onMouseEnter={() =>
-                                    (item.name === "Hakkımızda" || item.name === "Tekniklerimiz") &&
-                                    (item.name === "Hakkımızda"
+                                    (item.name === "About Us" || item.name === "Our Techniques") &&
+                                    (item.name === "About Us"
                                         ? setDropdownOpen(true)
                                         : setTreatmentDropdownOpen(true))
                                 }
                                 onMouseLeave={() =>
-                                    item.name === "Hakkımızda"
+                                    item.name === "About Us"
                                         ? setDropdownOpen(false)
-                                        : item.name === "Tekniklerimiz" &&
+                                        : item.name === "Our Techniques" &&
                                         setTreatmentDropdownOpen(false)
                                 }
                             >
@@ -134,13 +135,13 @@ const Header = () => {
                                 </NavLink>
 
                                 {/* Dropdown menu */}
-                                {(item.name === "Hakkımızda" || item.name === "Tekniklerimiz") && (
+                                {(item.name === "About Us" || item.name === "Our Techniques") && (
                                     <motion.div
                                         className="absolute left-0 top-full mt-2 bg-[#13253B] p-2 rounded-md w-full z-50"
                                         initial={{ opacity: 0 }}
                                         animate={{
                                             opacity:
-                                                item.name === "Hakkımızda"
+                                                item.name === "About Us"
                                                     ? dropdownOpen
                                                         ? 1
                                                         : 0
@@ -169,27 +170,27 @@ const Header = () => {
                 {/* Navigation Menu for Desktop */}
                 <div className={`w-full md:flex md:items-center ${isMenuOpen ? "hidden" : "hidden"}`}>
                     <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 w-full">
-                        {liste.map((item, index) => (
+                        {menuList.map((item, index) => (
                             <li
                                 key={index}
                                 className="relative group text-center md:text-left"
                                 onClick={() =>
-                                    item.name === "Hakkımızda"
+                                    item.name === "About Us"
                                         ? toggleDropdown()
-                                        : item.name === "Tekniklerimiz" &&
+                                        : item.name === "Our Techniques" &&
                                         toggleTreatmentDropdown()
                                 }
                                 onMouseEnter={() =>
-                                    (item.name === "Hakkımızda" || item.name === "Tekniklerimiz") &&
+                                    (item.name === "About Us" || item.name === "Our Techniques") &&
                                     !isMenuOpen &&
-                                    (item.name === "Hakkımızda"
+                                    (item.name === "About Us"
                                         ? setDropdownOpen(true)
                                         : setTreatmentDropdownOpen(true))
                                 }
                                 onMouseLeave={() =>
-                                    item.name === "Hakkımızda"
+                                    item.name === "About Us"
                                         ? setDropdownOpen(false)
-                                        : item.name === "Tekniklerimiz" &&
+                                        : item.name === "Our Techniques" &&
                                         setTreatmentDropdownOpen(false)
                                 }
                             >
@@ -205,13 +206,13 @@ const Header = () => {
                                 </NavLink>
 
                                 {/* Dropdown menu */}
-                                {(item.name === "Hakkımızda" || item.name === "Tekniklerimiz") && (
+                                {(item.name === "About Us" || item.name === "Our Techniques") && (
                                     <motion.div
                                         className="absolute left-0 top-full mt-2 bg-[#13253B] p-2 rounded-md w-48 z-50"
                                         initial={{ opacity: 0 }}
                                         animate={{
                                             opacity:
-                                                item.name === "Hakkımızda"
+                                                item.name === "About Us"
                                                     ? dropdownOpen
                                                         ? 1
                                                         : 0
@@ -232,22 +233,42 @@ const Header = () => {
                                         ))}
                                     </motion.div>
                                 )}
+
+                                {/* Arrow Icon for dropdowns */}
+                                {(item.name === "About Us" || item.name === "Our Techniques") && (
+                                    <motion.div
+                                        className="absolute top-0.5 -right-6 transform -translate-y-1/2"
+                                        initial={{ rotate: 0 }}
+                                        animate={{
+                                            rotate:
+                                                item.name === "About Us"
+                                                    ? dropdownOpen
+                                                        ? 180
+                                                        : 0
+                                                    : treatmentDropdownOpen
+                                                        ? 180
+                                                        : 0,
+                                        }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <MdKeyboardArrowDown className="text-white" size={24} />
+                                    </motion.div>
+                                )}
                             </li>
                         ))}
                     </ul>
                 </div>
 
-                {/* Arama ve Dil Seçimi */}
+                {/* Language Selector */}
                 <div className="flex items-center space-x-3">
-                    {/* Language Selector */}
                     <div className="relative flex items-center">
                         <select
                             value={language}
                             onChange={handleLanguageChange}
                             className="bg-[#13253B] text-white p-2 rounded-md hover:text-blue-500 focus:outline-none transition"
                         >
-                            <option onClick={() => navigate("/")} value="tr">🇹🇷 Turkish</option>
-                            <option onClick={() => navigate("/en")} value="en">🇬🇧 English</option>
+                            <option onClick={()=>navigate("/")} value="tr">🇹🇷 Turkish</option>
+                            <option onClick={()=>navigate("/en")} value="en">🇬🇧 English</option>
                         </select>
                     </div>
                 </div>
