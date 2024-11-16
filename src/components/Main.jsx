@@ -23,7 +23,7 @@ const Main = () => {
         <div className="relative w-full h-screen overflow-hidden">
             {/* Arka Plan Video */}
             <video
-                className="absolute top-0 left-0 w-full h-full object-cover filter brightness-75"
+                className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
                 autoPlay loop muted>
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
