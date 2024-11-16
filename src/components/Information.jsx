@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaTiktok, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope,FaYoutube, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Information = () => {
@@ -27,12 +27,6 @@ const Information = () => {
 
                 {/* Sosyal Medya İkonları */}
                 <div className="flex items-center space-x-3">
-                    <a href="#" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
-                        <FaLinkedin className="text-[#13253B] text-lg" />
-                    </a>
-                    <a href="#" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
-                        <FaTiktok className="text-[#13253B] text-lg" />
-                    </a>
                     <a href="#" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
                         <FaYoutube className="text-[#13253B] text-lg" />
                     </a>
