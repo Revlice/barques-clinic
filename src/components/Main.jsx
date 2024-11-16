@@ -26,7 +26,7 @@ const Main = () => {
             <video
                 className="absolute top-0 left-0 w-full pointer-events-none h-full object-cover filter brightness-75"
                 autoPlay loop muted style={{touchAction: 'none'}}>
-                <source src={video} type="video/mp4"/>
+                <source src={video} className="pointer-events-none" type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>
 
