@@ -36,7 +36,7 @@ const Information = () => {
                     <a href="#" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
                         <FaYoutube className="text-[#13253B] text-lg" />
                     </a>
-                    <a href="#" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
+                    <a href="https://www.instagram.com/barqueshairclinic?igsh=MWZxN2c0cnFicWwzMQ%3D%3D" target="_blank" className="p-2 rounded-full bg-gray-200 hover:bg-gray-400 transition">
                         <FaInstagram className="text-[#13253B] text-lg" />
                     </a>
                 </div>

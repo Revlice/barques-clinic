@@ -80,22 +80,6 @@ const Footer = () => {
             <div className="mt-10 border-t border-gray-700 pt-6 text-center">
                 <div className="flex justify-center space-x-6 mb-4">
                     <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-blue-400 transition"
-                    >
-                        <FaLinkedin size={24}/>
-                    </a>
-                    <a
-                        href="https://twitter.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-blue-400 transition"
-                    >
-                        <FaTiktok size={24}/>
-                    </a>
-                    <a
                         href="https://instagram.com"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -104,7 +88,7 @@ const Footer = () => {
                         <FaYoutube size={24}/>
                     </a>
                     <a
-                        href="https://linkedin.com"
+                        href="https://www.instagram.com/barqueshairclinic?igsh=MWZxN2c0cnFicWwzMQ%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-400 hover:text-blue-400 transition"

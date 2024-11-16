@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 import logo from "../assets/logo2.jpeg";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FaTimes } from "react-icons/fa";
-
+import {useNavigate} from 'react-router-dom';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [searchActive, setSearchActive] = useState(false);
     const [treatmentsDropdownOpen, setTreatmentsDropdownOpen] = useState(false);
-
+    const navigate = useNavigate();
     const liste = [
         { name: "Anasayfa", go: "/" },
         {
@@ -54,7 +53,7 @@ const Header = () => {
             >
                 {/* Logo ve Yardım Metni */}
                 <div className="text-white flex items-center w-full md:w-auto">
-                    <img src={logo} className="cursor-pointer w-auto h-24" alt="logo" />
+                    <img onClick={()=>navigate("/")} src={logo} className="cursor-pointer w-auto h-24" alt="logo" />
                     <span className="ml-12 border-l pl-12 w-full md:w-96 border-l-blue-500/50 text-center md:text-left">
                         Yardıma mı ihtiyacınız var? <br />
                         <span className="font-extrabold cursor-pointer hover:underline hover:text-gray-200 transition">
