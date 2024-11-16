@@ -207,12 +207,8 @@ const Header = () => {
                             className="bg-[#13253B] text-white p-1 rounded hover:text-blue-500 hover:cursor-pointer transition"
                         >
                             <option value="tr">🇹🇷 Türkçe</option>
-                            <option value="es">🇪🇸 İspanyolca</option>
                             <option value="en">🇬🇧 İngilizce</option>
                             <option value="de">🇩🇪 Almanca</option>
-                            <option value="he">🇮🇱 İbranice</option>
-                            <option value="sv">🇸🇪 İsveççe</option>
-                            <option value="fr">🇫🇷 Fransızca</option>
                         </select>
                     </div>
 
